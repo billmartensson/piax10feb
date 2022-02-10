@@ -19,11 +19,22 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(view)
 
+        supportFragmentManager.beginTransaction().replace(R.id.mainFragCon, SecondFragment()).commit()
+
         binding.fancyTV.text = "Banan"
         findViewById<TextView>(R.id.fancyTV).text = "Banan"
 
         binding.changeTextButton.setOnClickListener {
             binding.fancyTV.text = "Apelsin"
         }
+
+        binding.goFirstButton.setOnClickListener {
+            supportFragmentManager.beginTransaction().replace(R.id.mainFragCon, FirstFragment()).commit()
+        }
+
+        binding.goSecondButton.setOnClickListener {
+            supportFragmentManager.beginTransaction().replace(R.id.mainFragCon, SecondFragment()).commit()
+        }
+
     }
 }

@@ -4,15 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFE6E6"
-    tools:context=".FirstFragment">
+    android:background="#99F1E9"
+    tools:context=".SecondFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <data>
+        <variable name="fruit" type="String"/>
+    </data>
+
     <TextView
-        android:id="@+id/firstTextview"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment"
+        android:text="@{fruit}"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
